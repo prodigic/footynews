@@ -1,0 +1,220 @@
+body {
+	font-family: 'Molengo', arial, serif; 
+	line-height : 1.4em;
+	font-size:12px;
+	color : #333;			
+}
+
+
+.articleLink , .blogLink {
+	background:white;
+	color : #333;			
+}
+
+#container {
+	background : url('../images/gradient.png') repeat-x;
+	background-color : #ddd;
+	padding : 10px;
+	-moz-border-radius-topleft  : 15px;
+	-moz-border-radius-topright : 15px;
+	border-top-left-radius  : 15px;
+	border-top-right-radius : 15px;
+	margin-top : 5px;
+}
+
+#logoContainer {
+	float:left;
+	width :80px;
+	height:80px;
+}
+
+.masthead {
+	margin:0;
+	margin-top:5px;
+	color : #fff;
+}
+
+.subhead {
+	color : #999;
+	font-size : 14px;
+	font-style:italic;
+}
+
+.otherTeams {
+	margin-top : 20px;	
+}
+
+.articleLink, .otherTeams A {
+	text-decoration : none;	
+	font-weight:900;
+	color :#333;
+}
+
+.articleLink:hover, .otherTeams a:hover {
+	text-decoration : underline;	
+}
+
+.articlelist {
+	margin-top:10px;
+	background : white;
+	border : 1px solid #bbb;
+	padding : 12px;
+	overflow-y : hidden;
+	-moz-box-shadow: 3px 3px 22px #666;
+    -webkit-box-shadow: 3px 3px 22px #666;
+    box-shadow: 3px 3px 22px #666;
+	
+	-moz-border-radius : 5px;
+	border-radius  : 5px;
+	border-left:7px solid #333;
+}
+
+.articlelist H2 {
+	margin-bottom:8px;
+	margin-left:-12px;
+	margin-right:48px;
+	
+	padding:5px 25px;
+	font-weight:900;
+	color : white;
+	background : #333;
+	font-size : 14px;
+	
+    text-shadow: 2px 2px 2px #666; 
+
+	border:0px ridge #ccc;
+
+	padding:4px 8px 6px;
+	
+}
+
+.newcastle .articlelist H2  {
+
+	color : white;
+	background : #333;
+	
+    text-shadow: #666; 
+
+	border: #ccc;
+}
+
+.arsenal .articlelist {
+	border-left:7px solid #A00;
+}
+
+.arsenal .articlelist H2  {
+
+	color : #DAC088;
+	background : #A00;
+	
+    text-shadow: #666; 
+
+	border: #A00;
+}
+
+.liverpool .articlelist {
+	border-left:7px solid #A00;
+}
+
+.liverpool .articlelist H2  {
+
+	color : white;
+	background : #A00;
+	
+    text-shadow: #666; 
+
+	border: #A00;
+}
+
+.manchester .articlelist {
+	border-left:7px solid #A00;
+}
+
+.manchester .articlelist H2  {
+
+	color : white;
+	background : #A00;
+	
+    text-shadow: #666; 
+
+	border: #A00;
+}
+
+
+.snippet {
+	border-bottom : 1px solid #ddd;
+	margin-bottom : 3px;
+}
+
+.contentImage {
+	float : left;
+	padding-right : 5px;
+}
+
+.blogLink {
+	text-decoration : none;
+}
+
+.blogLink:hover {
+	text-decoration : underline;
+}
+
+.thumb {
+	margin : 0 5px 0 0;
+	vertical-align : top;
+	float : left;
+}
+
+.thumbContainer {
+	width : 84px;
+}
+
+.thumbContent {
+	vertical-align : top;		
+	border-bottom : 1px solid #ddd;
+}
+
+.contentTable .snippet {
+	border-bottom : none;
+}
+
+.doubleWide {
+	width : 48% ;
+	float : right;
+}
+
+#youtube {
+	height : 230px !important;
+}
+
+#hiddenContainer, .hidden {
+	display : none;
+}
+
+#amazon {
+	margin-left:10px;
+	float:right;
+}
+
+.style_A .articlelist H2 {
+	padding:8px 8px 10px;
+	color : white;
+	font-size : 21px;
+}
+
+.timestamp {
+	color :#999;
+	padding:12px;
+	min-height:36px;
+}
+
+.favicon { 
+	margin : 0px;
+	padding : 2px;
+	vertical-align:middle;
+	width:16px;
+	height:16px;
+	
+}
+
+.row_3 .snippet { display : none }

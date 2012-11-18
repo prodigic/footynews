@@ -1,0 +1,308 @@
+<!DOCTYPE HTML />
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="ROBOTS" 	 content="INDEX,FOLLOW"/>
+<meta name="title" 		 content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" 	 content=""/>
+<meta name="blogcatalog" content=""/>
+
+<meta name="viewport" content="user-scalable=no, width=device-width" />
+ 
+<title>News</title>
+		
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen and (min-width: 481px)" />
+<link rel="stylesheet" type="text/css" href="css/text.css" 	media="screen and (min-width: 481px)" />
+<link rel="stylesheet" type="text/css" href="css/960.css" 	media="screen and (min-width: 481px)" >
+<link rel="stylesheet" type="text/css" href="css/times.css" media="screen and (min-width: 481px)" />
+
+<link rel="stylesheet" type="text/css" href="css/android.css" media="only screen and (max-width: 480px)" />
+        
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'  runat='both'></script>
+
+<script runat='client'>
+
+var _gaq =[ ['_setAccount', 'UA-8251506-2'] , ['_trackPageview'] ];
+
+//TODO - make async
+(function(){
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+</head>
+<body>
+	 
+	 <div id="container" class="container_12">
+		
+		<div class='grid_12'>
+			<h1 class='masthead'></h1>
+			<h3 class='subhead'></h3>
+		</div>
+		<div class='clear'></div>
+			
+		<div class='grid_12'>
+     		<div class='otherTeams'>         			
+				Other Teams 
+				: <a onclick="pageTracker._link(this.href); return false;" href='http://www.arsenalfootballclubnews.com/' >Arsenal</a> 
+				| <a onclick="pageTracker._link(this.href); return false;" href='http://www.manchesterunitedfootballclubnews.com/' >Manchester United</a> 
+				| <a onclick="pageTracker._link(this.href); return false;" href='http://www.liverpoolfootballclubnews.com/' >Liverpool</a> 
+				| <a onclick="pageTracker._link(this.href); return false;" href='http://www.tottenhamhotspurfootballclubnews.com/'>Tottenham</a>
+				| <a onclick="pageTracker._link(this.href); return false;" href='http://www.newcastleunitedfootballclubnews.com/'>Newcastle</a> 
+     		</div>
+			
+		</div>
+		
+		<div class='clear'></div>	
+
+		<div id='hiddenContainer'></div>
+				
+	</div>
+
+	<div id='pagelayout' class='hidden'></div>
+
+<script id='init'></script>
+	
+<script runat='server'>		
+	
+		Jaxer.load("clubdata.js");
+		var clubname = clubMap[(Jaxer.request.parsedUrl.queryParts.team || "newc" )] || "Newcastle";	
+		var filename = clubs[clubname].file;
+		Jaxer.load("blogcrawl/"+filename);		
+			
+//TODO - pick template tool of choice (jquery?)
+
+		var contentRenderer = {				
+			base : function base(entry){ 
+				  var html = "<li><a class='articleLink mix121ClickLink' href='%%LINK%%'>%%TITLE%%</a></li>\n".replace("%%LINK%%",entry.link).replace("%%TITLE%%",entry.title);
+				      html += "<div class='snippet'>%%SNIPPET%%</div>\n".replace("%%SNIPPET%%", entry.contentSnippet);
+				  return html;
+			}
+		,	story : function base(entry){ 
+				  var html = "<div><a class='articleLink mix121ClickLink' href='%%LINK%%'>%%TITLE%%</a><div>\n".replace("%%LINK%%",entry.link).replace("%%TITLE%%",entry.title);
+				      html += "<div class='snippet'>%%SNIPPET%%</div>\n".replace("%%SNIPPET%%", uneval(entry));
+				  return html;
+			}
+		,	doubleWide : function base(entry){ 
+				  var html = "<div><a class='articleLink mix121ClickLink' href='%%LINK%%'>%%TITLE%%</a><div>\n".replace("%%LINK%%",entry.link).replace("%%TITLE%%",entry.title);
+				      html += "<div class='snippet'>%%SNIPPET%%</div>\n".replace("%%SNIPPET%%", entry.content);
+				  return html;
+				  
+			}			
+		,	noSnippet : function noSnippet(entry){ 
+				  return "<div><a class='articleLink mix121ClickLink' href='%%LINK%%'>%%TITLE%%</a><div>\n".replace("%%LINK%%",entry.link).replace("%%TITLE%%",entry.title);
+			}			
+		,   withImage : function withImage(entry){ 
+				  var html = (
+				  	<table class='contentTable'>
+				  		<tr class='contentItem'>
+							<td class='thumbContainer'>%%IMG%%</td>
+							<td class='thumbContent'><a class='articleLink  mix121ClickLink' href={entry.link}>%%TITLE%%</a><div class='snippet'>%%SNIPPET%%</div></td>
+						</tr>
+					</table>
+					).toString();
+				  var image = "<img class='thumb'"+entry.content.split("img")[1].split("<")[0];					  
+				  return html.replace("%%IMG%%",image).replace("%%TITLE%%",entry.title).replace("%%SNIPPET%%", entry.contentSnippet);
+			}			
+		, 	youtube : function youtube(entry){
+				 var videoID=entry.link.replace(/.*\=/,"");
+			     var movieURL = "http://www.youtube.com/v/"+videoID+"&hl=en&fs=1&rel=0&border=1"
+				 var h = 200;
+				 var w = 225;
+			     var html = (
+						<object width={w} height={h}>
+						<param name="movie" value={movieURL}></param>
+						<param name="allowFullScreen" value="true"></param>
+						<param name="allowscriptaccess" value="always"></param>
+						<embed src={movieURL} type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width={w} height={h}></embed>
+						</object>
+							).toString();
+				return html;
+			}
+		, 	xmlImage : function xmlImage(entry){
+			
+			     var html = (<DIV>{uneval(entry)}</DIV>).toString();
+				return html;
+			}
+		};
+		
+//TODO - dont have jquery on NODEJS
+		function getContent(URL, targetDiv, itemCount, showSnippet, renderer){				
+			renderer = renderer || 'base';				
+			googleURL = "http://ajax.googleapis.com/ajax/services/feed/load?";			
+			//fetch content from json source//
+			feedJSON = JSON.parse(Jaxer.Web.get(googleURL+Jaxer.Util.Url.hashToQuery({v : "1.0",q : URL,num : itemCount,scoring : "h"})));							
+			var t = $('#'+targetDiv);
+			try {
+				alert(targetDiv+":"+feedJSON.responseStatus);
+				for (var i = 0; i < feedJSON.responseData.feed.entries.length; i++) {
+					var entry = feedJSON.responseData.feed.entries[i];
+					t.append(contentRenderer[renderer](entry));
+				}
+			} catch (e) {}
+
+		};
+				
+//TODO - dont have jquery on NODEJS
+		function showJSONContent(targetDiv){
+			var t = $('#'+targetDiv);	
+		    for (var i = 0; i < club_blogs_entries.length; i++) {
+		      var entry =  club_blogs_entries[i];
+			  var blog = "<strong><a class='articleLink mix121ClickLink' href='%%BLOG_URL%%'>%%BLOG%%</a></strong> : ".replace("%%BLOG%%",entry.blog_name).replace("%%BLOG_URL%%",entry.blog_url);
+			  t.append(blog);
+			  var snippet = "<a class='blogLink  mix121' href='%%BLOG_URL%%'>%%BLOG%%</a><br/>\n".replace("%%BLOG%%",entry.entry_title).replace("%%BLOG_URL%%",entry.entry_url);
+			  t.append(snippet);
+		    };
+		};
+
+//TODO - dont have jquery on NODEJS
+		function showWidgetContent(targetDiv){	
+			var t = $('#'+targetDiv);			
+			var script = "";	t.append(script);
+		};
+		 
+		var club = clubs[clubname];
+
+//TODO - dont have jquery on NODEJS
+
+		$('BODY').addClass(clubname.toLowerCase());
+		$('TITLE').text(club.name + " News");
+		
+		$("meta[name=title]").attr("content",club.name + " News");
+		$("meta[name=blogcatalog]").attr("content",club.blogcatalog);
+		$("meta[name=description]").attr("content","Up-to-the-minute selection of the most credible news, posts and tweets on "+club.name+" Football Club at a glance");
+		$("meta[name=keywords]").attr("content","Football,Soccer,Premier League,English Premier League,Premiership,Champions League,Europa Cup,FA Cup,"+club.keywords);
+		 		
+		$('.masthead').text(club.name + " News");
+		$('.subhead').text("the latest news, posts and tweets on "+club.name+" Football Club" );
+		
+		//Create Layout
+		
+		var layout = club.layout;
+
+//TODO - dont have jquery on NODEJS
+		var container = $("#hiddenContainer");
+
+		for (var rows = 0; rows < layout.length ; rows++){	
+			var colWide = 12 / layout[rows].length;	
+			for (var cols = 0; cols < layout[rows].length; cols++){
+				container.append("<div id='content_"+layout[rows][cols]+"'>"+layout[rows][cols]+"</div>")
+			}
+		};
+		
+		$.each(club.content, function(item){
+			var o = club.content[item];
+//TODO - dont have jquery on NODEJS
+//			$("#content_"+o.name).html("<div id='"+o.name+"'	class='articlelist'><h2>"+club.name+" "+ o.name+"</h2></div>");		
+			$("#content_"+o.name).html("<h2>"+club.name+" "+ o.name+"</h2><ul id='"+o.name+"' </ul>");		
+			getContent(o.URL, o.name, o.count, o.showSnippet, o.renderer);	
+		});
+		
+//TODO - dont have jquery on NODEJS
+		$('BODY').append("<div class='footer'><center><span class='timestamp'>"+new Date()+"</span><center></div>");
+
+		
+//TODO - dont have jquery on NODEJS
+		$("#content_fanBlogs").html("<div id='fanBlogs'	class='articlelist'><h2>"+club.name+" Blogs</h2></div>");		
+		showJSONContent('fanBlogs');
+		
+		layout.pop();
+		
+		init_content="\nvar layout="+uneval(layout)+";\n";
+//TODO - dont have jquery on NODEJS
+	    $('#init').html(init_content);
+			
+		Jaxer.response.setClientFramework(null);
+					
+	</script>
+				
+<script>
+
+$(function(){
+
+	var container = $("#container");
+	
+	// adjust layout for mobile/handheld pc
+		
+	if (window.location.hostname.indexOf('m.')==0) {
+		
+		$('DIV').filter('.snippet').removeClass('grid_12').addClass('mobile');
+		
+		$('.otherTeams a').each(function(){ 
+			$(this).attr("href",this.href.replace(/www\./,'').replace(/\/\//,'\/\/m.'));
+		});
+	
+//TODO - wont work in old browsers		
+		layout = layout.reduce(function(a,b){ return b.reverse().concat(a) },[]).map(function(v){ return [v] }).reverse();
+	};
+					
+	for (var rows = 0; rows < layout.length ; rows++){
+		
+		var displayed = {};
+		var colWide = 12 / layout[rows].length;
+
+		for (var cols = 0; cols < layout[rows].length; cols++){
+			if (!displayed[layout[rows][cols]]) {
+				
+				var count=0;
+				for (var c=0;c<layout[rows].length;c++){
+					if (layout[rows][cols] == layout[rows][c]) count++;  
+				}							
+				var itemWidth = colWide * count;
+				
+				container.append("<div id='_" + layout[rows][cols] + "' class='row_" + rows + " grid_" + itemWidth + "'>" + $("#content_" + layout[rows][cols]).html() + "</div>");
+				$("#content_" + layout[rows][cols]).remove();
+				displayed[layout[rows][cols]] = true;
+			}
+		}
+		container.append("<div class='clear'></div>")
+	};
+					
+	container.append("<div class='clear'></div>")
+	container.append("<div class='footer'><center><img src='http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl="+window.location.href.replace('www','m')+"'/><center></div>");
+	
+    // Display favicon of source site						
+ 
+	 $(".articleLink").each(function() {
+
+		var link        = $(this);
+		
+		var embeddedURL   = link.attr('href').replace(/.*3A%2F%2F/,"").replace(/%2F.*/,"").replace(/.*:\/\//,"").replace(/\/.*/,"");					
+		var faviconURL    = link.attr('href').replace(/^(http:\/\/[^\/]+).*$/, '$1').replace(/^http:\/\//, '')
+		
+		if (embeddedURL != faviconURL) {
+			faviconURL = embeddedURL 
+		}
+		var site=faviconURL
+		
+		faviconURL = "http://"+faviconURL + '/favicon.ico';
+
+//todo better as a obj/HASHMAP
+		// handle some special favicon cases
+		if (~faviconURL.indexOf('manchestereveningnews.co.uk')) faviconURL = 'http://www.manchestereveningnews.co.uk/favicon.ico'
+		if (~faviconURL.indexOf('footballfancast.com')) 		faviconURL = 'http://www.footballfancast.com/wp-content/themes/ffc-theme/images/favicon.ico' 
+		if (~faviconURL.indexOf('vitalfootball.co.uk')) 		faviconURL = 'http://www.vitalfootball.co.uk/sitemedia/vf.ico'
+		if (~faviconURL.indexOf('cortitasyalpie.com')) 			faviconURL = 'http://www.cortitasyalpie.com/wp-content/themes/cordobo-green-park-2/favicon.ico'
+		if (~faviconURL.indexOf('sport.co.uk'))              	faviconURL = 'http://www.sport.co.uk/public/graphics/favicon.ico'
+			
+		var faviconIMG = $('<img class=favicon src="/favicon.ico" title="'+site+'" />').insertBefore(link);
+            faviconIMG.attr('src', faviconURL);
+	
+		link.html(link.html()+'<img class="favicon" src="http://www.arsenalfootballclubnews.com/favicon.ico"/>');
+	});
+
+	
+ 		});
+</script>
+</body>
+</html>

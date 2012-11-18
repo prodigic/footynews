@@ -1,0 +1,17 @@
+var club_blogs_entries = [
+{ "blog_name": "Liverpool Captain", "blog_url": "http://liverpoolcaptain.blogspot.com/", "entry_title": "This is Anfield", "entry_url": "http://LiverpoolCaptain.Blogspot.com"},
+{ "blog_name": "Anfield Talk", "blog_url": "http://anfieldtalk.blogspot.com/", "entry_title": "Giuseppe Rossi Lined Up As An Option For Liverpool", "entry_url": "http://anfieldtalk.blogspot.com/2012/11/giuseppe-rossi-lined-up-as-option-for.html"},
+{ "blog_name": "Anfield Red", "blog_url": "http://www.anfieldred.co.uk/", "entry_title": "AnfieldRed", "entry_url": "http://anfieldred.co.uk"},
+{ "blog_name": "Red's Fury", "blog_url": "http://redsfury.blogspot.com/", "entry_title": "Premier League: Liverpool 3-0 Wigan", "entry_url": "http://redsfury.blogspot.com/2012/11/premier-league-liverpool-3-0-wigan.html"},
+{ "blog_name": "Liverpool Banter", "blog_url": "http://www.liverpoolbanter.co.uk/", "entry_title": "Enrique Does Not Eat the Pies, He Beats Them", "entry_url": "http://feedproxy.google.com/~r/LiverpoolBanter/~3/EIBRX9VXXKA/enrique-does-not-eat-the-pies.html"},
+{ "blog_name": "Oh You Beauty", "blog_url": "http://ohyoubeauty.blogspot.com/", "entry_title": "Liverpool 3-0 Wigan", "entry_url": "http://ohyoubeauty.blogspot.com/2012/11/liverpool-3-0-wigan.html"},
+{ "blog_name": "The Liverpool Way", "blog_url": "http://www.liverpoolway.co.uk/blog/", "entry_title": "Chelsea 1 Liverpool 1 by Dave Usher", "entry_url": "http://www.liverpoolway.co.uk/blog/?p=1683"},
+{ "blog_name": "Anfield Online", "blog_url": "http://www.anfield-online.co.uk/", "entry_title": "Suarez show rumbles on as reds punish Wigan", "entry_url": "http://feedproxy.google.com/~r/lfcreds/~3/t4suW-Eybes/"},
+{ "blog_name": "Have You Ever Been To Liverpool", "blog_url": "http://redfloyd.wordpress.com/", "entry_title": "Wigan review and Reds fall victim to the old “best player to leave soon” ruse!", "entry_url": "http://redfloyd.wordpress.com/2012/11/17/wigan-review-and-reds-fall-victim-to-the-old-best-player-to-leave-soon-ruse/"},
+{ "blog_name": "Anfield Road", "blog_url": "http://www.anfieldroad.com/", "entry_title": "Keep signing for Anne Williams", "entry_url": "http://www.anfieldroad.com/news/lfc/2012-11-10/6023/keep-signing-for-anne-williams.html/"},
+{ "blog_name": "KopBlog", "blog_url": "http://www.thisisanfield.com/kopblog/", "entry_title": "“Twelve Angry Me…at Pies”", "entry_url": "http://www.thisisanfield.com/kopblog/2012/10/twelve-angry-meat-pies/"},
+{ "blog_name": "Our Kop", "blog_url": "http://www.ourkop.com/", "entry_title": "Agent: Striker never wanted to leave club", "entry_url": "http://www.ourkop.com/2012/10/01/agent-striker-never-wanted-to-leave-club/"},
+{ "blog_name": "A Liverpool Thing", "blog_url": "http://www.aliverpoolthing.blogspot.com/", "entry_title": "A Liverpool Thing", "entry_url": "http://www.aliverpoolthing.com/"},
+{ "blog_name": "My Anfield", "blog_url": "http://www.myanfield.net/", "entry_title": "Liverpool FC Calendar - 2012 / 2013", "entry_url": "http://feedproxy.google.com/~r/MyAnfield/~3/7ezSgPFVULU/liverpool-fc-calendar-2012-2013.html"},
+{ "blog_name": "Anfield Reds", "blog_url": "http://anfieldreds.blogspot.com/", "entry_title": "May All Remember the 96", "entry_url": "http://feedproxy.google.com/~r/anfieldredsblogspot/~3/-xdnOmgTMLw/may-all-remember-96.html"}
+];

@@ -1,0 +1,17 @@
+var club_blogs_entries = [
+{ "blog_name": "Hidup Marti Arsenal", "blog_url": "http://hidupmatiarsenal.blogspot.com/", "entry_title": "Arsenal Still A Threat This Season", "entry_url": "http://feedproxy.google.com/~r/blogspot/mGGhp/~3/4wajgGPXwgA/arsenal-still-threat-this-season.html"},
+{ "blog_name": "Gooner's Diary", "blog_url": "http://goonersdiary.blogspot.com/", "entry_title": "Derby Day Triumph A Fitting Celebration Of Treacle's Life", "entry_url": "http://feedproxy.google.com/~r/blogspot/TwGoN/~3/vbDpPAYqUsY/derby-day-triumph-fitting-celebration.html"},
+{ "blog_name": "A Cultured Left Foot", "blog_url": "http://aculturedleftfoot.wordpress.com/", "entry_title": "A Cultured Left Foot", "entry_url": "http://www.aclfarsenal.co.uk"},
+{ "blog_name": "Arseblog", "blog_url": "http://www.oleole.com/blogs/arseblog/", "entry_title": "Arseblog ... an Arsenal blog", "entry_url": "http://arseblog.com"},
+{ "blog_name": "The Online Gooner", "blog_url": "http://onlinegooner.com/", "entry_title": "The Online Gooner", "entry_url": "http://www.onlinegooner.com"},
+{ "blog_name": "Gooner Talk", "blog_url": "http://goonertalk.com/", "entry_title": "Spurs thrashing is just the tonic for Arsenal", "entry_url": "http://feedproxy.google.com/~r/goonertalk2/~3/SCHmMX6zrW4/"},
+{ "blog_name": "GoonerBoy", "blog_url": "http://goonerboy.blogspot.com/", "entry_title": "The 17 Minute DVD: 13 Thoughts on Arsenal 5 Spurs 2", "entry_url": "http://goonerboy.blogspot.com/2012/11/the-17-minute-dvd-13-thoughts-on.html"},
+{ "blog_name": "Untold Arsenal", "blog_url": "http://www.blog.emiratesstadium.info/", "entry_title": "Society of Black Lawyers clearly to blame for problems at Arsenal/Tottenham game", "entry_url": "http://blog.emiratesstadium.info/archives/25963"},
+{ "blog_name": "Le Grove", "blog_url": "http://le-grove.co.uk/", "entry_title": "Pay Theo whatever he wants | Arsenal spank Spurs out of sight… again! | Match review + video + pics", "entry_url": "http://feedproxy.google.com/~r/LeGrove/~3/ZiqWDTpslBo/"},
+{ "blog_name": "Arsenal Insider", "blog_url": "http://www.arsenalinsider.com/", "entry_title": "Backpage Roundup: Arteta Retains Penalty Taking Role, No Progress Over Walcott Deal, Fans Told To Behave, Wilshere Defends Wenger’s Record and More", "entry_url": "http://www.arsenalinsider.com/7753/backpage-roundup-arteta-retains-penalty-taking-role-no-progress-over-walcott-deal-fans-told-to-behave-wilshere-defends-wengers-record-and-more/"},
+{ "blog_name": "East Lower", "blog_url": "http://eastlower.co.uk/", "entry_title": "Scripted to perfection for the second year running", "entry_url": "http://eastlower.co.uk/?p=2440"},
+{ "blog_name": "Clock Enders", "blog_url": "http://clockenders.com/afc/", "entry_title": "24 hours to go", "entry_url": "http://clockenders.com/afc/?p=8849"},
+{ "blog_name": "Arsenal Youth", "blog_url": "http://arsenalyouth.wordpress.com/", "entry_title": "Loan report- Forgotten man Park scores for Celta, worrying lack of game-time for other loanees", "entry_url": "http://arsenalyouth.wordpress.com/2012/11/18/loan-report-forgotten-man-park-scores-for-celta-worrying-lack-of-game-time-for-other-loanees/"},
+{ "blog_name": "Wrighty 7", "blog_url": "http://www.wrighty7.blogspot.com/", "entry_title": "Wrighty7", "entry_url": "http://wrighty7.blogspot.com/"},
+{ "blog_name": "The Offside", "blog_url": "http://arsenal.theoffside.com/", "entry_title": "Arsenal v. Tottenham – LiveBlog!", "entry_url": "http://arsenal.theoffside.com/team-news/arsenal-v-tottenham-liveblog.html"}
+];

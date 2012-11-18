@@ -1,0 +1,17 @@
+var club_blogs_entries = [
+{ "blog_name": "My United, My Life", "blog_url": "http://spectregoesred.blogspot.com/", "entry_title": "Ferguson Stinks Up Carrow Road", "entry_url": "http://feedproxy.google.com/~r/MyUnitedMyLife/~3/K3xGTCB67mg/ferguson-stinks-up-carrow-road.html"},
+{ "blog_name": "The Republik of Mancunia", "blog_url": "http://therepublikofmancunia.com/", "entry_title": "Tribute to Kenny Morgans", "entry_url": "http://therepublikofmancunia.com/tribute-to-kenny-morgans/?utm_source=rss&utm_medium=rss&utm_campaign=tribute-to-kenny-morgans"},
+{ "blog_name": "Man Utd Daily News", "blog_url": "http://www.manutddailynews.com/", "entry_title": "United to assess ill Rooney", "entry_url": "http://feedproxy.google.com/~r/manutddailynews/btiR/~3/HPnCXuBBt0c/united-to-assess-ill-rooney-20562.html"},
+{ "blog_name": "MUFC The Religion", "blog_url": "http://redtilldeath.blogspot.com/", "entry_title": "Norwich topple United", "entry_url": "http://redtilldeath.blogspot.com/2012/11/norwich-topple-united.html"},
+{ "blog_name": "The Stretty Rant", "blog_url": "http://www.stretford-end.com/blog/", "entry_title": "Norwich City 1-0 Man United – perfect tactics beat insipid Reds", "entry_url": "http://www.stretford-end.com/2012/11/norwich-city-1-0-man-united-perfect-tactics-beat-insipid-reds/"},
+{ "blog_name": "Manchester United FC Blog", "blog_url": "http://manchesterunitedsblog.blogspot.com/", "entry_title": "Cantona could be the next United manager", "entry_url": "http://feedproxy.google.com/~r/ManchesterUnitedsBlog/~3/-zmHHk0Shco/cantona-could-be-next-united-manager.html"},
+{ "blog_name": "Red Rants", "blog_url": "http://redrants.com/", "entry_title": "Two opposites clash as United travel to on song Canaries + CONFIRMED LINEUP", "entry_url": "http://redrants.com/two-opposites-clash-as-united-travel-to-on-song-canaries/"},
+{ "blog_name": "United Till I Die, No Lie", "blog_url": "http://utdtillidie.blogspot.com/", "entry_title": "Norwich 1 - 0 United", "entry_url": "http://utdtillidie.blogspot.com/2012/11/norwich-1-0-united.html"},
+{ "blog_name": "The Offside", "blog_url": "http://manu.theoffside.com/", "entry_title": "Manchester United", "entry_url": "http://manutd.theoffside.com"},
+{ "blog_name": "Manchester United Blog", "blog_url": "http://manutd.blogsfc.com/", "entry_title": "Manchester United", "entry_url": "http://manutd.footballblog.co.uk"},
+{ "blog_name": "Man United Devils", "blog_url": "http://manuniteddevils.blogspot.com/", "entry_title": "Man United Devils", "entry_url": "http://manuniteddevils.com"},
+{ "blog_name": "Truly Reds", "blog_url": "http://www.trulyreds.com/", "entry_title": "Javier ‘Chicharito’ Hernandez Analysis", "entry_url": "http://www.trulyreds.com/20121116/javier-chicharito-hernandez-analysis/"},
+{ "blog_name": "Man Utd 24", "blog_url": "http://manutd24.wordpress.com/", "entry_title": "ManUtd24", "entry_url": "http://manutd24.co.uk"},
+{ "blog_name": "A Kick In The Grass", "blog_url": "http://a-kick-in-the-grass.blogspot.com/", "entry_title": "Old Trafford alarm bells ringing as Galatasaray expose United's soft under belly...is it time for Ferguson to ditch 4-4-2?", "entry_url": "http://a-kick-in-the-grass.blogspot.com/2012/09/old-trafford-alarm-bells-ringing-as.html"},
+{ "blog_name": "Man Utd Blog", "blog_url": "http://www.manutdblog.com/", "entry_title": "Man Utd Blog", "entry_url": "http://www.manchesterunited-blog.com"}
+];

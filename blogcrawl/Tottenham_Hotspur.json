@@ -1,0 +1,17 @@
+var club_blogs_entries = [
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Them something us two", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/17/them-something-us-two"},
+{ "blog_name": "All Action No Plot", "blog_url": "http://www.allactionnoplot.com/", "entry_title": "Arsenal 5-2 Spurs: AVB Emerges With Some Credit, Oddly Enough", "entry_url": "http://www.allactionnoplot.com/2012/11/arsenal-5-2-spurs-avb-emerges-with-some-credit-oddly-enough-1773/"},
+{ "blog_name": "All Action No Plot", "blog_url": "http://www.allactionnoplot.com/", "entry_title": "Arsenal - Spurs Preview: The Art of Mutual Pessimism", "entry_url": "http://www.allactionnoplot.com/2012/11/arsenal-spurs-preview-the-art-of-mutual-pessimism-1771/"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Problem?", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/17/meme-nld"},
+{ "blog_name": "JimmyG2", "blog_url": "http://jimmyg2.blogspot.com/", "entry_title": "Arsenal's Secret Dossier on Spurs.", "entry_url": "http://jimmyg2.blogspot.com/2012/11/arsenals-secret-dossier-on-spurs.html"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Heroes and Villians", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/16/heroes-and-villians"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "​Catalyst", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/15/catalyst"},
+{ "blog_name": "JimmyG2", "blog_url": "http://jimmyg2.blogspot.com/", "entry_title": "Heat turned up another notch on AVB.", "entry_url": "http://jimmyg2.blogspot.com/2012/11/heat-turned-up-another-notch-on-avb.html"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "War and Peace", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/13/war-and-peace"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "How do you solve a problem like a Boas?", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/11/solve-boas"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Update", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/11/update"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Could be a classic", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/11/could-be-a-classic"},
+{ "blog_name": "JimmyG2", "blog_url": "http://jimmyg2.blogspot.com/", "entry_title": "Lights, Camera, Inaction.", "entry_url": "http://jimmyg2.blogspot.com/2012/11/lights-camera-inaction.html"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "Remember", "entry_url": "http://www.dearmrlevy.com/dml/poppy"},
+{ "blog_name": "Dear Mr Levy", "blog_url": "http://www.dearmrlevy.com/", "entry_title": "'You're not singing Maribor'", "entry_url": "http://www.dearmrlevy.com/dml/2012/11/9/1882-block-j"}
+];
