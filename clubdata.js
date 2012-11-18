@@ -1,3 +1,7 @@
+/*******
+ * test edit
+ ******* */
+ 
 var clubMap = {
     live : "Liverpool"
 ,   pool : "Liverpool"
